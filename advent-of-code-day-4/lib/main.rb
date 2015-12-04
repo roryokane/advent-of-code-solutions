@@ -32,4 +32,5 @@ end
 if __FILE__ == $0
   secret_key = gets.chomp
   puts Hasher.lowest_initial_zeroes_added_number(secret_key, 5)
+  puts Hasher.lowest_initial_zeroes_added_number(secret_key, 6)
 end

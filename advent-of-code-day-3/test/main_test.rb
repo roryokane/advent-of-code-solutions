@@ -24,4 +24,14 @@ class MainTest < MiniTest::Test
   def test_movement_ignores_unknown_char
     assert_equal [3, 0], Movement.moved_coord('?', [3, 0])
   end
+  
+  def test_single_santa_direction_grid
+    assert_equal 5, SantaTravel.grid_from_following_directions("^><<v").visited_coords.size
+  end
+  
+  def test_two_santa_direction_grid
+    assert_equal 3, SantaTravel.grid_from_two_santas_following_directions("^v").visited_coords.size
+    assert_equal 3, SantaTravel.grid_from_two_santas_following_directions("^>v<").visited_coords.size
+    assert_equal 11, SantaTravel.grid_from_two_santas_following_directions("^v^v^v^v^v").visited_coords.size
+  end
 end

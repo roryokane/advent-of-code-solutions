@@ -46,12 +46,33 @@ module SantaTravel
       
       grid
     end
+    
+    def grid_from_two_santas_following_directions(directions)
+      santa_locations = [[0, 0], [0, 0]]
+      grid = Grid.new
+      santa_locations.each do |location|
+        grid.visit!(location)
+      end
+      curr_santa_index = 0
+      
+      directions.each_char do |direction_char|
+        current_location = santa_locations[curr_santa_index]
+        new_location = Movement.moved_coord(direction_char, current_location)
+        grid.visit!(new_location)
+        
+        santa_locations[curr_santa_index] = new_location
+        curr_santa_index = (curr_santa_index + 1) % santa_locations.size
+      end
+      
+      grid
+    end
   end
 end
 
 
 if __FILE__ == $0
-  directions = gets
-  grid = SantaTravel.grid_from_following_directions(directions)
+  directions = gets.chomp
+  #grid = SantaTravel.grid_from_following_directions(directions)
+  grid = SantaTravel.grid_from_two_santas_following_directions(directions)
   puts grid.visited_coords.size
 end

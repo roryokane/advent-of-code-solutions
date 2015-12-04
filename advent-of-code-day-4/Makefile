@@ -10,6 +10,10 @@ dependencies:
 test:
 	bundle exec ruby test/*_test.rb
 
+.PHONY: repl
+repl:
+	bundle exec irb
+
 .PHONY: run
 run:
 	bundle exec ruby lib/main.rb

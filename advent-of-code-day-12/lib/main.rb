@@ -24,7 +24,42 @@ def sum_extracted_numbers(json_with_nums)
   return nums.reduce(0, :+)
 end
 
+
+
+def sum_numbers_not_in_red_objects(json)
+  tree = JSON.parse(json)
+  0 + sum_of_numbers_not_in_red_objects_recursive(tree)
+end
+
+def sum_of_numbers_not_in_red_objects_recursive(node)
+  case node
+  when Array
+    sum_of_allowed_numbers_recursive(node)
+  when Hash
+    if node.values.include?("red")
+      0
+    else
+      # I don’t have to look at node.keys because keys are always strings
+      # in JSON, and it was specified that no strings have numbers
+      sum_of_allowed_numbers_recursive(node.values)
+    end
+  when Numeric
+    node
+  else
+    0
+  end
+end
+
+def sum_of_allowed_numbers_recursive(node_enum_to_be_counted)
+  return node_enum_to_be_counted.map do |sub|
+    sum_of_numbers_not_in_red_objects_recursive(sub)
+  end.reduce(0, :+)
+end
+
+
+
 if __FILE__ == $0
   json_with_nums = $stdin.read
   puts sum_extracted_numbers(json_with_nums)
+  puts sum_numbers_not_in_red_objects(json_with_nums)
 end

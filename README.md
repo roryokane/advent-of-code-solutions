@@ -2,7 +2,7 @@
 
 These are my solutions to the coding puzzles at [adventofcode.com](http://adventofcode.com/).
 
-So far, I have completed 6 out of the 25 puzzles, and earned 12 out of 50 stars. The programming languages I have used are Clojure and Ruby.
+So far, I have completed 7 out of the 25 puzzles, and earned 14 out of 50 stars. The programming languages I have used are Clojure and Ruby.
 
 1. **[Day 1](http://adventofcode.com/day/1)**: Clojure – [code](https://github.com/roryokane/advent-of-code-solutions/blob/master/advent-of-code-day-1/src/advent_of_code_day_1/core.clj), [tests](https://github.com/roryokane/advent-of-code-solutions/blob/master/advent-of-code-day-1/test/advent_of_code_day_1/core_test.clj)
 1. **[Day 2](http://adventofcode.com/day/2)**: Clojure – [code](https://github.com/roryokane/advent-of-code-solutions/blob/master/advent-of-code-day-2/src/advent_of_code_day_2/core.clj), [tests](https://github.com/roryokane/advent-of-code-solutions/blob/master/advent-of-code-day-2/test/advent_of_code_day_2/core_test.clj)
@@ -15,7 +15,7 @@ So far, I have completed 6 out of the 25 puzzles, and earned 12 out of 50 stars.
 1. **[Day 9](http://adventofcode.com/day/9)**: *not yet solved*
 1. **[Day 10](http://adventofcode.com/day/10)**: *not yet solved*
 1. **[Day 11](http://adventofcode.com/day/11)**: *not yet solved*
-1. **[Day 12](http://adventofcode.com/day/12)**: *not yet solved*
+1. **[Day 12](http://adventofcode.com/day/12)**: Ruby – [code](https://github.com/roryokane/advent-of-code-solutions/blob/master/advent-of-code-day-12/lib/main.rb), [tests](https://github.com/roryokane/advent-of-code-solutions/blob/master/advent-of-code-day-12/test/main_test.rb)
 1. **[Day 13](http://adventofcode.com/day/13)**: *not yet solved*
 1. **[Day 14](http://adventofcode.com/day/14)**: *not yet solved*
 1. **[Day 15](http://adventofcode.com/day/15)**: *not yet solved*

@@ -1,3 +1,8 @@
+"use strict";
+
+const split = require('split');
+
+
 class StringContentsCharCounter {
   constructor(stringContents) {
     this.stringContents = stringContents;
@@ -49,3 +54,15 @@ function countStringLiteralCharacters(stringLiteral) {
   const contentsCounter = new StringContentsCharCounter(contents);
   return contentsCounter.count();
 }
+
+
+function main() {
+  var total = 0;
+  process.stdin.pipe(split()).on('data', (line) => {
+    total += line.length;
+    total -= countStringLiteralCharacters(line);
+  }).on('end', () => {
+    console.log(total);
+  });
+}
+main();

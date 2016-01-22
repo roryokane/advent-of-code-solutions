@@ -1,0 +1,21 @@
+{
+  "name": "js-karma-kata-seed",
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start --single-run",
+    "karma": "./node_modules/karma/bin/karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kata-seeds/js-karma-seed.git"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/kata-seeds/js-karma-seed",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.1.18",
+    "jasmine-core": "^2.2.0",
+    "karma": "^0.12.31",
+    "karma-babel-preprocessor": "^6.0.1",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^0.1.4"
+  }
+}

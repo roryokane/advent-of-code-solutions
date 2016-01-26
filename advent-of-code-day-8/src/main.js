@@ -1,12 +1,20 @@
 "use strict";
 const split = require('split');
-const countStringLiteralCharacters = require('./index');
+const solution = require('../src/');
+const countCharsAfterStringLiteralDecode = solution.countCharsAfterStringLiteralDecode;
+const countCharsAfterStringLiteralEncode = solution.countCharsAfterStringLiteralEncode;
 
 
-var total = 0;
+var totalDecodeCharsSaved = 0;
+var totalEncodeCharsGained = 0;
+
 process.stdin.pipe(split()).on('data', (line) => {
-  total += line.length;
-  total -= countStringLiteralCharacters(line);
+  totalDecodeCharsSaved += line.length;
+  totalDecodeCharsSaved -= countCharsAfterStringLiteralDecode(line);
+  
+  totalEncodeCharsGained += countCharsAfterStringLiteralEncode(line);
+  totalEncodeCharsGained -= line.length;
 }).on('end', () => {
-  console.log(total);
+  console.log('chars saved after decode:', totalDecodeCharsSaved);
+  console.log('chars gained after encode:', totalEncodeCharsGained);
 });

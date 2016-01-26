@@ -2,7 +2,7 @@
 const split = require('split');
 
 
-class StringContentsCharCounter {
+class EscapedStringContentsCharCounter {
   constructor(stringContents) {
     this.stringContents = stringContents;
     this.index = 0;
@@ -48,8 +48,21 @@ class StringContentsCharCounter {
   }
 }
 
-module.exports = function countStringLiteralCharacters(stringLiteral) {
+exports.countCharsAfterStringLiteralDecode = function countCharsAfterStringLiteralDecode(stringLiteral) {
   const contents = stringLiteral.slice(1, -1); // cut out surrounding quotes
-  const contentsCounter = new StringContentsCharCounter(contents);
+  const contentsCounter = new EscapedStringContentsCharCounter(contents);
   return contentsCounter.count();
+}
+
+
+exports.countCharsAfterStringLiteralEncode = function countCharsAfterStringLiteralEncode(string) {
+  let charCount = 2; // for the two double-quotes at either end
+  string.split('').forEach((char) => {
+    if (char === '\\' || char === '"') {
+      charCount += 2;
+    } else {
+      charCount++;
+    }
+  });
+  return charCount;
 }

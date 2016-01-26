@@ -1,5 +1,4 @@
 "use strict";
-
 const split = require('split');
 
 
@@ -49,20 +48,8 @@ class StringContentsCharCounter {
   }
 }
 
-function countStringLiteralCharacters(stringLiteral) {
+module.exports = function countStringLiteralCharacters(stringLiteral) {
   const contents = stringLiteral.slice(1, -1); // cut out surrounding quotes
   const contentsCounter = new StringContentsCharCounter(contents);
   return contentsCounter.count();
 }
-
-
-function main() {
-  var total = 0;
-  process.stdin.pipe(split()).on('data', (line) => {
-    total += line.length;
-    total -= countStringLiteralCharacters(line);
-  }).on('end', () => {
-    console.log(total);
-  });
-}
-main();

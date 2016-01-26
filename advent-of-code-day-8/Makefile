@@ -1,16 +1,15 @@
+.PHONY: all
 all: dependencies test
 
+.PHONY: dependencies
+dependencies:
+	which node npm >/dev/null 2>&1
+	npm install
+
+.PHONY: test
 test:
 	npm test
 
-test-watch:
-	npm run karma
-
+.PHONY: run
 run:
-	node src/kata.js
-
-dependencies:
-	which node npm phantomjs
-	npm install
-
-.PHONY: all dependencies test
+	node src/main.js

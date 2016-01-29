@@ -27,13 +27,6 @@
        (reduce add-connection-to-graph {})))
 
 
-;; I might not need these functions after all
-(defn- remove-directed-edge-from-graph [graph [from to]]
-  (update-in graph [from] dissoc to))
-(defn- remove-connection-from-graph [graph [loc1 loc2]]
-  (let [all-directed-edges [[loc1 loc2] [loc2 loc1]]]
-    (reduce remove-directed-edge-from-graph graph all-directed-edges)))
-
 (defn- remove-all-edges-to-node [graph to-node]
   (reduce (fn [graph from-node]
             (update-in graph [from-node] dissoc to-node))

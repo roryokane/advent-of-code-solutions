@@ -62,6 +62,10 @@
                 (partition 2 1 path))))
 
 
+;; I tried fixing the duplication in the following code by extracting
+;; generic functions like `find-extreme-path`, but the result was overly
+;; complex. This arrangement is better.
+
 (defn- min-by [f coll]
   (apply min-key f coll))
 (defn- max-by [f coll]

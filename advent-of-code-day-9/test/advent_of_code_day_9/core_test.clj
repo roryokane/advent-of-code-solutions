@@ -23,7 +23,7 @@
               "Dublin" {"London" 464, "Belfast" 141}}
              (parse-distance-graph lines))))))
 
-(deftest finding-shortest-distance
+(deftest finding-extreme-distances
   (let [test-graph
         {"London" {"Dublin" 464, "Belfast" 518}
          "Belfast" {"London" 518, "Dublin" 141}
@@ -49,4 +49,12 @@
                 (= ["Belfast" "Dublin" "London"] shortest-path)))))
 
     (testing "finding shortest distance"
-      (is (= 605 (find-shortest-distance test-graph))))))
+      (is (= 605 (find-shortest-distance test-graph))))
+    
+    (testing "finding longest path"
+      (let [longest-path (find-longest-path test-graph)]
+        (is (or (= ["Dublin" "London" "Belfast"] longest-path)
+                (= ["Belfast" "London" "Dublin"] longest-path)))))
+    
+    (testing "finding longest distance"
+      (is (= 982 (find-longest-distance test-graph))))))

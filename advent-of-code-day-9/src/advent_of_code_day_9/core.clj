@@ -68,14 +68,22 @@
   (apply + (map (partial distance-of-edge graph)
                 (partition 2 1 path))))
 
+
 (defn- min-by [f coll]
   (apply min-key f coll))
+(defn- max-by [f coll]
+  (apply max-key f coll))
 
 (defn find-shortest-path [graph]
   (min-by (partial distance-of-path graph) (all-spanning-paths graph)))
+(defn find-longest-path [graph]
+  (max-by (partial distance-of-path graph) (all-spanning-paths graph)))
 
 (defn find-shortest-distance [graph]
   (distance-of-path graph (find-shortest-path graph)))
+(defn find-longest-distance [graph]
+  (distance-of-path graph (find-longest-path graph)))
+
 
 (defn -main
   "Read in distances between locations and print the length of the shortest route that visits all locations."
@@ -83,5 +91,6 @@
   (->> (slurp *in*)
        (string/split-lines)
        (parse-distance-graph)
-       (find-shortest-distance)
+       #_(find-shortest-distance)
+       (find-longest-distance)
        (println)))

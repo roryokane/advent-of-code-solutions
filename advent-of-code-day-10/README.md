@@ -4,7 +4,7 @@
 
 For http://adventofcode.com/day/10.
 
-This project was based on [ocaml-boilerplate](https://github.com/yuanqing/ocaml-boilerplate), but the build system was modified to use `corebuild`, add a `run` build target, and remove generation of test coverage reports with `bisect`.
+This project was based on [ocaml-boilerplate](https://github.com/yuanqing/ocaml-boilerplate), but the build system was modified to use `corebuild`, add a `run` build target, and remove the generation of test coverage reports.
 
 ## Setup
 
@@ -27,5 +27,3 @@ To run the program that reads input and outputs the answer, do:
 ```
 $ make run
 ```
-
-The module name and various paths/files are all specified at the top of the `Makefile`.

@@ -2,7 +2,7 @@
 
 These are my solutions to the coding puzzles at [adventofcode.com](http://adventofcode.com/).
 
-So far, I have completed 9 out of the 25 puzzles, and earned 18 out of 50 stars. The programming languages I have used are Clojure, Ruby, and JavaScript.
+So far, I have completed 10 out of the 25 puzzles, and earned 20 out of 50 stars. The programming languages I have used are Clojure, Ruby, JavaScript, and OCaml.
 
 1. **[Day 1](http://adventofcode.com/day/1)**: Clojure – [code](https://github.com/roryokane/advent-of-code-solutions/blob/master/advent-of-code-day-1/src/advent_of_code_day_1/core.clj), [tests](https://github.com/roryokane/advent-of-code-solutions/blob/master/advent-of-code-day-1/test/advent_of_code_day_1/core_test.clj)
 1. **[Day 2](http://adventofcode.com/day/2)**: Clojure – [code](https://github.com/roryokane/advent-of-code-solutions/blob/master/advent-of-code-day-2/src/advent_of_code_day_2/core.clj), [tests](https://github.com/roryokane/advent-of-code-solutions/blob/master/advent-of-code-day-2/test/advent_of_code_day_2/core_test.clj)
@@ -13,7 +13,7 @@ So far, I have completed 9 out of the 25 puzzles, and earned 18 out of 50 stars.
 1. [Day 7](http://adventofcode.com/day/7): *not yet solved*
 1. **[Day 8](http://adventofcode.com/day/8)**: JavaScript – [code](https://github.com/roryokane/advent-of-code-solutions/blob/master/advent-of-code-day-8/src/index.js), [runner](https://github.com/roryokane/advent-of-code-solutions/blob/master/advent-of-code-day-8/src/main.js), [tests](https://github.com/roryokane/advent-of-code-solutions/blob/master/advent-of-code-day-8/test/test.js)
 1. **[Day 9](http://adventofcode.com/day/9)**: Clojure – [code](https://github.com/roryokane/advent-of-code-solutions/blob/master/advent-of-code-day-9/src/advent_of_code_day_9/core.clj), [tests](https://github.com/roryokane/advent-of-code-solutions/blob/master/advent-of-code-day-9/test/advent_of_code_day_9/core_test.clj)
-1. [Day 10](http://adventofcode.com/day/10): *not yet solved*
+1. **[Day 10](http://adventofcode.com/day/10)**: OCaml – [`LookAndSay` module](https://github.com/roryokane/advent-of-code-solutions/blob/master/advent-of-code-day-10/lookAndSay.ml), [`MathSequence` module](https://github.com/roryokane/advent-of-code-solutions/blob/master/advent-of-code-day-10/mathSequence.ml), [runner](https://github.com/roryokane/advent-of-code-solutions/blob/master/advent-of-code-day-10/main.ml), [tests](https://github.com/roryokane/advent-of-code-solutions/blob/master/advent-of-code-day-10/test.ml)
 1. [Day 11](http://adventofcode.com/day/11): *not yet solved*
 1. **[Day 12](http://adventofcode.com/day/12)**: Ruby – [code](https://github.com/roryokane/advent-of-code-solutions/blob/master/advent-of-code-day-12/lib/main.rb), [tests](https://github.com/roryokane/advent-of-code-solutions/blob/master/advent-of-code-day-12/test/main_test.rb)
 1. [Day 13](http://adventofcode.com/day/13): *not yet solved*

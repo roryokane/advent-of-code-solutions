@@ -3,5 +3,5 @@
 *.cm*
 *.log
 *.o
-*.out
-coverage/
+*.native
+_build/

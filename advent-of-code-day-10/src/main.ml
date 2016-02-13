@@ -1,7 +1,6 @@
 open Core.Std
 
-(* let times_to_repeat = 40 *)
-let times_to_repeat = 50
+let times_to_repeat = 40
 
 let () =
   let require_line = (function

@@ -1,4 +1,7 @@
-S ./*
-B ./*
+S src/
+S test/
+B _build
+B _build/src/
+B _build/test/
 PKG core
 PKG ounit
